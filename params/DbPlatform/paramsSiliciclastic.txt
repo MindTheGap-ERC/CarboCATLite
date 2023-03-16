@@ -1,0 +1,6 @@
+50                   siliciclastic at source point(in m)
+1                       y position of input carbonate
+25                      x position of input carbonate
+0                      source length (0 for point source, >0 for line source)    
+2000                     diffusion on y direction, in m2/yr
+2000                     diffusion on x direction, in m2/yr

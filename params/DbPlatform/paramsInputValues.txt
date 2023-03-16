@@ -1,0 +1,64 @@
+LongRamp        Model Name
+10		Total number of grid cells in the x direction (Strike)
+150		Total number of grid cells in the y direction (dip)
+100		Grid cell edge dimension, in meters
+200	        Total iterations
+0.01           Timestep( My) 
+
+1.00            Eustasy period 1 (My)
+20.0          	Eustasy amplitude 1 (m)
+0.112           Eustasy period 2 (My)
+5.0             Eustasy amplitude 2 (m)
+
+1               Timesteps per CA iteration at max prod rate
+1               Timesteps per CA iteration at min prod rate
+
+100000          Bathymetry difference between cells that get disconected in CA
+
+3               Number of producing factories
+
+500            Lithology 1 REEF maximum carb production Rate (mMy-1)
+0.3	        Lithology 1 Surface light intensity / bell shape, depth of maximum production
+30              Lithology 1 extinction coefficient / bell shape, vertical width of the bell
+20              Lithology 1 saturating light / bell shape, shape of the curve, rounded or spiky
+4               Lithology 1 transport product facies
+0.9             Lithology 1 transported fraction of total production
+0.3             Lithology 1 minimum gradient for transport, m per m
+0.7		Lithology 1 probability threshold for gradient-independent continuous transport
+0.9		Minimum tolerated wave energy, reef
+1.0		Maximum tolerated wave energy, reef
+
+160            Lithology 2 Platform interior maximum carb production Rate (mMy-1)
+0.1	        Lithology 2 Surface light intensity / bell shape, depth of maximum production
+40              Lithology 2 extinction coefficient / bell shape, vertical width of the bell
+5              Lithology 2 saturating light / bell shape, shape of the curve, rounded or spiky
+5               Lithology 2 transport product facies
+0.4             Lithology 2 transported fraction of total production
+0.2            Lithology 2 minimum gradient for transport, m per m
+0.7		Lithology 2 probability threshold for gradient-independent continuous transport
+0.2		Minimum tolerated wave energy, platform interior
+0.9		Maximum tolerated wave energy, platform interior
+
+150            Lithology 3 Platform interior maximum carb production Rate (mMy-1)
+0.1	        Lithology 3 Surface light intensity / bell shape, depth of maximum production
+40              Lithology 3 extinction coefficient / bell shape, vertical width of the bell
+10              Lithology 3 saturating light / bell shape, shape of the curve, rounded or spiky
+6               Lithology 3 transport product facies
+0.4             Lithology 3 transported fraction of total production
+0.1            	Lithology 3 minimum gradient for transport, m per m
+0.7		Lithology 3 probability threshold for gradient-independent continuous transport
+0.0		Minimum tolerated wave energy, platform interior
+0.2		Maximum tolerated wave energy, platform interior
+
+params/DbPlatform/simpleOneRateSubsidence70mY150X10.txt		spatially uniform constant subsdience rate m/My
+params/DbPlatform/CARules3_4_10_6_10.txt                  	CA rules input file
+params/DbPlatform/initialFaciesMapRandomY150X10.txt        initial condition facies map
+params/DbPlatform/initialTopographyRamp80m.txt            initial water depth map
+params/DbPlatform/paramsConcentration.txt                  concentration input parameters
+params/DbPlatform/paramsSiliciclastic.txt                 	silicilastic input parameters
+params/DbPlatform/seaLevelConstS1000iterations.txt           sea level curve, maybe not needed if sinusoid selected
+params/DbPlatform/carbProdConst1000Iterations.txt		carbonate maximum production rate time curve
+colorMaps/carboCAT3FaciesColours.txt		facies colour map files
+
+10                       Number of time lines to plot on cross sections
+50 100 150 200 250 300 350 400 450 500   Ages of the time lines in terms of model iteration number

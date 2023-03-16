@@ -1,0 +1,8 @@
+10000000                    carbonate input at source point(in m3/yrs)
+10                       y position of input carbonate
+25                       x position of input carbonate
+1000000                     diffusion on y direction plus, in m2/yr
+500000                     diffusion on y direction minus, in m2/yr
+500000                     diffusion on x direction plus, in m2/yr
+100000                     diffusion on x direction minus, in m2/yr
+0.0                     initial concentration value for the whole grid, in kg/m3
