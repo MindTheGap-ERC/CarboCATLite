@@ -2,7 +2,7 @@ LongRamp        Model Name
 10		Total number of grid cells in the x direction (Strike)
 150		Total number of grid cells in the y direction (dip)
 100		Grid cell edge dimension, in meters
-2000	        Total iterations
+2580	        Total iterations
 0.001           Timestep( My) 
 
 1.00            Eustasy period 1 (My)
@@ -56,7 +56,7 @@ params/DbPlatform/initialFaciesMapRandomY150X10.txt        initial condition fac
 params/DbPlatform/initialTopographyRamp80m.txt            initial water depth map
 params/DbPlatform/paramsConcentration.txt                  concentration input parameters
 params/DbPlatform/paramsSiliciclastic.txt                 	silicilastic input parameters
-params/DbPlatform/seaLevelConstS3000iterations.txt           sea level curve, maybe not needed if sinusoid selected
+params/DbPlatform/sea_level_scenarioB.txt           sea level curve, maybe not needed if sinusoid selected
 params/DbPlatform/carbProdConst3000Iterations.txt		carbonate maximum production rate time curve
 colorMaps/carboCAT3FaciesColours.txt		facies colour map files
 
