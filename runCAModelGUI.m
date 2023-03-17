@@ -83,6 +83,11 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
         iteration = iteration - 1;
     end
     
+    % export model outputs to main workspace
+    assignin("base","glob",glob);
+
+    assignin("base","stats",stats);
+    
     fprintf('Model complete after %d iterations and ready to plot\n',iteration);
 
     % movie(mapMovie,1,1);
