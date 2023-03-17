@@ -99,6 +99,8 @@ function glob = initializeGUI(glob, stats, graph)
     movegui(graph.main,'center')
     % Make the GUI visible.
     set(graph.main,'Visible','on');
+    
+
 
         function initButton_Callback(source, eventdata)
 

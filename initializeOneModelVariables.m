@@ -137,6 +137,8 @@ function [glob] = initializeOneModelVariables(glob)
     end
     
     stats.totalFaciesVolume = zeros(glob.maxIts, glob.maxFacies);
+
+    disp("Initialization done")
 end
 
 
