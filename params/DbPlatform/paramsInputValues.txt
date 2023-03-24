@@ -56,7 +56,7 @@ params/DbPlatform/initialFaciesMapRandomY150X10.txt        initial condition fac
 params/DbPlatform/initialTopographyRamp80m.txt            initial water depth map
 params/DbPlatform/paramsConcentration.txt                  concentration input parameters
 params/DbPlatform/paramsSiliciclastic.txt                 	silicilastic input parameters
-params/DbPlatform/sea_level_scenarioB.txt           sea level curve, maybe not needed if sinusoid selected
+params/DbPlatform/sea_level_scenarioB_normalized.txt           sea level curve, maybe not needed if sinusoid selected
 params/DbPlatform/carbProdConst3000Iterations.txt		carbonate maximum production rate time curve
 colorMaps/carboCAT3FaciesColours.txt		facies colour map files
 
