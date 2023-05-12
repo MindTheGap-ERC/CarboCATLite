@@ -1,10 +1,10 @@
 # CarboCAT Lite
 
-Lite version of the CarboCAT model by Peter Burgess. See also Burgess (2013)
+Lite version of the CarboCAT model by Peter Burgess. See also Burgess (2013).
 
 ## Branches
 
-The branch "archive_original_version" is read only. It contains a version of CarboCATLite last modified on the 15th Feb 2021 and is the closest we have to an unmodified version of CarboCATLite. -Niklas
+The branch "archive_original_version" is read only. It contains a version of CarboCAT Lite last modified on the 15th Feb 2021.
 
 ## Old README
 
@@ -23,3 +23,21 @@ intial facies maps, sea-level curves and other inputs you might need to create
 useful models
 
 Any questions, e-mail peter.burgess@liverpool.ac.uk"
+
+## License and copyright
+Copyright 2013-2023 University of Liverpool and Royal Holloway, University of London
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+   ## References
+   Burgess, Peter M. "CarboCAT: A cellular automata model of heterogeneous carbonate strata." Computers & geosciences 53 (2013): 129-140.
