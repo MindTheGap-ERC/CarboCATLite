@@ -2,6 +2,14 @@
 
 Lite version of the CarboCAT model by Peter Burgess. See also Burgess (2013).
 
+## Running Instruction
+
+1. Run the file _carboCATGUI.m_ in Matlab
+2. Click the "initialize" button. This will get the model parameters
+3. Click the "Run CA model" button to run the model. The model status is shown in the console
+4. After the run is finished, all model outputs appear in the matlab workspace
+5. To plot the results, click "plot run". WARNING: Generating the plots can take a long time.
+
 ## Branches
 
 The branch "archive_original_version" is read only. It contains a version of CarboCAT Lite last modified on the 15th Feb 2021.
