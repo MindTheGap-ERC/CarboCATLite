@@ -1,4 +1,4 @@
-simpleWave        % Facies distribution routines: 'simpleWave','orderedCA' or 'productionCA' or 'waveCA' or 'waveHybridCA'
+productionCA        % Facies distribution routines: 'simpleWave','orderedCA' or 'productionCA' or 'waveCA' or 'waveHybridCA'
 steepestSlope   % transportation algorithm: 'steepestSlope' or 'crossPlatform'
 on              % wave Energy
 off             % siliciciclastics: 'on' or 'off'
