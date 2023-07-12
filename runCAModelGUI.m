@@ -1,5 +1,8 @@
 function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
 % Run the model by executing all the functions specified in the processes input file
+    
+    % save initial configuration plot
+    exportgraphics(gcf,'scenarioB_initial_conditions.pdf','ContentType','vector')   
 
     order = 1; % rotates the order of facies neighbour checking in calculateFaciesCA to avoid bias for any one facies
     iteration = 2;
