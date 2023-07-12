@@ -8,7 +8,7 @@ function plotFinalGraphics(glob, stats, iteration)
 
      % autosave figure
     disp('Saving figure, please wait...')
-    exportgraphics(gcf,'dip_section_and_chronostrat_scenarioA.pdf','ContentType','vector')    
+    exportgraphics(gcf,'scenarioA_dip_section_and_chronostrat.pdf','ContentType','vector')    
     disp('figure saved')
     
     %fprintf('Drawing the 3D block diagram...');
