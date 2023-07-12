@@ -88,6 +88,9 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
 
     assignin("base","stats",stats);
     
+    % save model outputs
+    save("CarboCATLite_outputs.mat")
+
     fprintf('Model complete after %d iterations and ready to plot\n',iteration);
 
     % movie(mapMovie,1,1);
