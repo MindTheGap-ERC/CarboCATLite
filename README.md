@@ -4,11 +4,26 @@ Lite version of the CarboCAT model by Peter Burgess. See also Burgess (2013).
 
 ## Running Instruction
 
-1. Run the file _carboCATGUI.m_ in Matlab
-2. Click the "initialize" button. This will get the model parameters
-3. Click the "Run CA model" button to run the model. The model status is shown in the console
-4. After the run is finished, all model outputs appear in the matlab workspace
-5. To plot the results, click "plot run". WARNING: Generating the plots can take a long time.
+1. In Matlab, run the command
+
+```{matlab}
+run carboCATGUI
+```
+
+This will open the CarboCATLite GUI
+
+2. Click the "initialize" button. This will import the model parameters from the _params_ folder
+3. Click the "Run CA model" button to run the model. The model status is shown in the console. The run is finished if you see the message
+
+```{matlab}
+Model complete after X iterations and ready to plot
+```
+
+in the console.
+
+4. After the run is finished, all model outputs are in the matlab workspace, and are saved into _CarboCATLite_outputs.mat_.
+
+5. To plot the results, click "plot run". This will generate the chronostratigraphic diagram and a basin transect in dip direction. Both the initial conditios and the chronostrat diagram/basin transect are automatically saved as .pdf files. WARNING: Generating the plots can take a long time. Saving the plots is finished once the message ```figure saved``` is displayed in the console.
 
 ## Branches
 
