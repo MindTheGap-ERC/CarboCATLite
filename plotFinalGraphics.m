@@ -7,7 +7,7 @@ function plotFinalGraphics(glob, stats, iteration)
     fprintf('Done\n');
 
      % autosave figure
-    disp('Saving figure')
+    disp('Saving figure, please wait...')
     exportgraphics(gcf,'dip_section_and_chronostrat_scenarioA.pdf','ContentType','vector')    
     disp('figure saved')
     
