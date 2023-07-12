@@ -1,6 +1,9 @@
 function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
 % Run the model by executing all the functions specified in the processes input file
 
+% save initial condition plot
+exportgraphics(gcf,'scenarioA_initial_conditions.pdf','ContentType','vector')  
+
     order = 1; % rotates the order of facies neighbour checking in calculateFaciesCA to avoid bias for any one facies
     iteration = 2;
 
@@ -87,6 +90,9 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
     assignin("base","glob",glob);
 
     assignin("base","stats",stats);
+
+    % save model outputs
+    save("scenarioA_matlab_outputs.mat")
     
     fprintf('Model complete after %d iterations and ready to plot\n',iteration);
 
