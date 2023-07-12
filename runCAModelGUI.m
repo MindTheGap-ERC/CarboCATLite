@@ -90,6 +90,9 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
     assignin("base","glob",glob);
 
     assignin("base","stats",stats);
+
+    % save mode outputs
+    save("scenarioB_matlab_outputs.mat")
     
     fprintf('Model complete after %d iterations and ready to plot\n',iteration);
 
