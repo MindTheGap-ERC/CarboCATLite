@@ -25,3 +25,8 @@ testY = 1:glob.ySize;
     axis square
     view([135, 45]);
     title('final surface facies distribution');
+
+ %%% output csv files
+ FinalBath = writematrix(-wd,'FinalBathmap.csv');
+ FinalFacies = writematrix(double(faciesM)),'FinalFaciesMap');
+ 
