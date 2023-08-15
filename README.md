@@ -1,6 +1,6 @@
 # CarboCAT Lite
 
-Lite version of the CarboCAT model by Peter Burgess. See also Burgess (2013).
+CarboCATLite is a reduced complexity version of the CarboCAT model of carbonate platform growth developed by Peter Burgess, see [Burgess (2013)](https://doi.org/10.1016/j.cageo.2011.08.026). CarboCATLite uses a cellular automata to model spatial competition between carbonate factories whose accumulation rates are dependent on environmental conditions (e.g., subsidence and sea level driven water depth, wave energy, etc.).
 
 ## Running Instruction
 
@@ -21,33 +21,12 @@ Model complete after X iterations and ready to plot
 
 in the console.
 
-4. After the run is finished, all model outputs are in the matlab workspace, and are saved into _CarboCATLite_outputs.mat_.
+4. After the run is finished, all model outputs are in the matlab workspace, and are saved into the file _CarboCATLite_outputs.mat_.
 
 5. To plot the results, click "plot run". This will generate the chronostratigraphic diagram and a basin transect in dip direction. Both the initial conditios and the chronostrat diagram/basin transect are automatically saved as .pdf files. WARNING: Generating the plots can take a long time. Saving the plots is finished once the message ```figure saved``` is displayed in the console.
 
-## Branches
-
-The branch "archive_original_version" is read only. It contains a version of CarboCAT Lite last modified on the 15th Feb 2021.
-
-## Old README
-
-Content of the old README.txt file:
-
-"double click on the file carboCATGUI.m to open Matlab and load this file.
-Run the function either by enterting the function name carboCATGUI at the command prompt,
-or by clicking run in the editor tab
-
-The GUI should be reasonably intuitive; click on the Initialise button to set up the model
-ready to run, then click on Run CA Model, then on PLot run and you should see the
-results from the paramsProcess.txt and the paramsInputValues.txt input files I have set up
-in the params folder. You can edit both of these files to run different models.
-You can also use the code in the utilities folder to make new initial topography,
-intial facies maps, sea-level curves and other inputs you might need to create
-useful models
-
-Any questions, e-mail peter.burgess@liverpool.ac.uk"
-
 ## License and copyright
+
 Copyright 2013-2023 University of Liverpool and Royal Holloway, University of London
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,6 +40,7 @@ Copyright 2013-2023 University of Liverpool and Royal Holloway, University of Lo
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-   
-   ## References
+
+## References
+
    Burgess, Peter M. "CarboCAT: A cellular automata model of heterogeneous carbonate strata." Computers & geosciences 53 (2013): 129-140.
