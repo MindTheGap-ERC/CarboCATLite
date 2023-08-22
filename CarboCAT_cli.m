@@ -1,4 +1,18 @@
-function CarboCAT_cli(ParamsPath, ProcessPath, OutputName)
+function CarboCAT_cli(ParamsPath, ProcessPath, OutputName, SeaLevelPath, makePlot)
+% Input variables
+% ParamsPath: string, relative path to the file with parameters, e.g.
+%   "params\DbPlatform\paramsInputValues.txt"
+% ProcessPath: string, relative path to the file with the process settings,
+% e.g. "params\DbPlatform\paramsProcesses.txt"
+% OutputName: string, name to which model outputs are saved, e.g.
+% "model_run_42"
+% SeaLevelPath: string, relative path to the file with the sea level curve,
+% e.g. "params\DbPlatform\seaLevelConst3000iterations.txt"
+% makePlot: logical, true or false. Should the chronostratigraphic plot be
+% generated?
+%
+% Example usage:
+% CarboCAT_cli("params\DbPlatform\paramsInputValues.txt", "params\DbPlatform\paramsProcesses.txt", "model_run_42", "params\DbPlatform\seaLevelConst3000iterations.txt", true)
 
     graph.main = 0;
     graph.f1 = 0;
@@ -22,7 +36,7 @@ function CarboCAT_cli(ParamsPath, ProcessPath, OutputName)
     
     glob.paramsFName = ParamsPath;
     glob.processFName = ProcessPath;
-    [glob, inputSuccessful] = inputOneModelParams(glob, glob.paramsFName,glob.processFName);
+    [glob, inputSuccessful] = inputOneModelParams(glob, glob.paramsFName,glob.processFName, SeaLevelPath);
     if inputSuccessful
         glob = initialiseModelGridArrays(glob);
         glob = initializeOneModelVariables(glob);
@@ -33,4 +47,10 @@ function CarboCAT_cli(ParamsPath, ProcessPath, OutputName)
     [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName);
     glob.initFlag = 0;
 
+    if makePlot
+        iteration=glob.totalIterations;
+        plotFinalGraphics(glob, stats, iteration, OutputName);
+
+    end
+    fprintf(append('Done with model run ', OutputName,'\n'));
 end
