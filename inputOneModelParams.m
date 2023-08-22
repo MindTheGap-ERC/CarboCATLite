@@ -1,4 +1,4 @@
-function [glob, inputSuccessFlag] = inputOneModelParams(glob, fName, fPName)
+function [glob, inputSuccessFlag] = inputOneModelParams(glob, fName, fPName, SeaLevelPath)
 
     inputSuccessFlag = 1; % Assume initialisation works, unless the flag is reset to zero below, for example by file read error
 
@@ -197,4 +197,6 @@ function [glob, inputSuccessFlag] = inputOneModelParams(glob, fName, fPName)
     glob.mapCount = fscanf(fileIn,'%d', 1);
     dummyLabel = fgetl(fileIn);
     glob.mapAge = zeros(1,glob.mapCount+1);
+
+    glob.SLCurveFName = SeaLevelPath;
 end
