@@ -1,4 +1,14 @@
 function CarboCAT_cli(ParamsPath, ProcessPath, OutputName)
+% Input variables
+% ParamsPath: string, relative path to the file with parameters, e.g.
+%   "params\DbPlatform\paramsInputValues.txt"
+% ProcessPath: string, relative path to the file with the process settings,
+% e.g. "params\DbPlatform\paramsProcesses.txt"
+% OutputName: string, name to which model outputs are saved, e.g.
+% "model_run_42.mat"
+%
+% Example usage:
+% CarboCAT_cli("params\DbPlatform\paramsInputValues.txt", "params\DbPlatform\paramsProcesses.txt", "model_run_42.mat")
 
     graph.main = 0;
     graph.f1 = 0;
@@ -32,5 +42,7 @@ function CarboCAT_cli(ParamsPath, ProcessPath, OutputName)
     
     [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName);
     glob.initFlag = 0;
+
+
 
 end
