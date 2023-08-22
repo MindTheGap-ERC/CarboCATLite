@@ -2,7 +2,7 @@ LongRamp        Model Name
 10		Total number of grid cells in the x direction (Strike)
 150		Total number of grid cells in the y direction (dip)
 100		Grid cell edge dimension, in meters
-2000	        Total iterations
+2580	        Total iterations
 0.001           Timestep( My) 
 
 1.00            Eustasy period 1 (My)
