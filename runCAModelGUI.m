@@ -78,7 +78,7 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName)
     end
         
     % save model outputs
-    save(char(OutputName), "glob")
+    save(append(OutputName,".mat"), "glob")
 
     fprintf('Model complete after %d iterations and output saved\n',iteration);
 
