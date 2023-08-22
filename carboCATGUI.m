@@ -34,7 +34,23 @@ stats.totalFaciesVolume = 0;
 
 set(0,'RecursionLimit',1000);
 
-glob = initializeGUI(glob, stats, graph);
+        function initButton_Callback(source, eventdata)
+
+            glob.paramsFName = get(hParamsFname,'String');
+            glob.processFName=get(hProcessesFname,'String');
+            [glob, inputSuccessful] = inputOneModelParams(glob, glob.paramsFName,glob.processFName);
+            if inputSuccessful
+                glob = initialiseModelGridArrays(glob);
+                glob = initializeOneModelVariables(glob);
+                plotInitialGraphics(glob, graph, 1);
+            else
+                h1 = msgbox('Model initialise was not successful');
+            end
+        end
+
+
+
+% glob = initializeGUI(glob, stats, graph);
 
 
 
