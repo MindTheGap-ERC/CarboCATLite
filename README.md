@@ -7,23 +7,22 @@ CarboCATLite is a reduced complexity version of the CarboCAT model of carbonate 
 1. In Matlab, run the command
 
 ```{matlab}
-run carboCATGUI
+CarboCAT_cli("params\DbPlatform\paramsInputValues.txt", "params\DbPlatform\paramsProcesses.txt", "model_run_42", "params\DbPlatform\seaLevelConst3000iterations.txt", true)
 ```
 
-This will open the CarboCATLite GUI
+Input parameters:
 
-2. Click the "initialize" button. This will import the model parameters from the _params_ folder
-3. Click the "Run CA model" button to run the model. The model status is shown in the console. The run is finished if you see the message
+`ParamsPath`: string, relative path to the file with parameters, e.g. "params\DbPlatform\paramsInputValues.txt"
 
-```{matlab}
-Model complete after X iterations and ready to plot
-```
+`ProcessPath`: string, relative path to the file with the process settings, e.g. "params\DbPlatform\paramsProcesses.txt"
 
-in the console.
+`OutputName`: string, name to which model outputs are saved, e.g. "model_run_42"
 
-4. After the run is finished, all model outputs are in the matlab workspace, and are saved into the file _CarboCATLite_outputs.mat_.
+`SeaLevelPath`: string, relative path to the file with the sea level curve, e.g. "params\DbPlatform\seaLevelConst3000iterations.txt"
 
-5. To plot the results, click "plot run". This will generate the chronostratigraphic diagram and a basin transect in dip direction. Both the initial conditios and the chronostrat diagram/basin transect are automatically saved as .pdf files. WARNING: Generating the plots can take a long time. Saving the plots is finished once the message ```figure saved``` is displayed in the console.
+`makePlot`: logical, true or false. Should the chronostratigraphic plot be generated?
+
+2. After the run is finished, all model outputs are saved into the file given as `OutputName`.
 
 ## License and copyright
 
