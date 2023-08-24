@@ -7,18 +7,19 @@ CarboCATLite is a reduced complexity version of the CarboCAT model of carbonate 
 1. In Matlab, run the command
 
 ```{matlab}
-CarboCAT_cli("params\DbPlatform\paramsInputValues.txt", "params\DbPlatform\paramsProcesses.txt", "model_run_42", "params\DbPlatform\seaLevelConst3000iterations.txt", true)
+CarboCAT_cli("params/DbPlatform/paramsInputValues.txt", "params/DbPlatform/paramsProcesses.txt",
+"model_run_42", "params/DbPlatform/seaLevelConst3000iterations.txt", true)
 ```
 
 Input parameters:
 
-`ParamsPath`: string, relative path to the file with parameters, e.g. "params\DbPlatform\paramsInputValues.txt"
+`ParamsPath`: string, relative path to the file with parameters, e.g. "params/DbPlatform/paramsInputValues.txt"
 
-`ProcessPath`: string, relative path to the file with the process settings, e.g. "params\DbPlatform\paramsProcesses.txt"
+`ProcessPath`: string, relative path to the file with the process settings, e.g. "params/DbPlatform/paramsProcesses.txt"
 
 `OutputName`: string, name to which model outputs are saved, e.g. "model_run_42"
 
-`SeaLevelPath`: string, relative path to the file with the sea level curve, e.g. "params\DbPlatform\seaLevelConst3000iterations.txt"
+`SeaLevelPath`: string, relative path to the file with the sea level curve, e.g. "params/DbPlatform/seaLevelConst3000iterations.txt"
 
 `makePlot`: logical, true or false. Should the chronostratigraphic plot be generated?
 
