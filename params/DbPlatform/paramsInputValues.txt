@@ -52,8 +52,8 @@ LongRamp        Model Name
 
 params/DbPlatform/simpleOneRateSubsidence70mY150X10.txt		spatially uniform constant subsdience rate m/My
 params/DbPlatform/CARules3_4_10_6_10.txt                  	CA rules input file
-params/DbPlatform/FaciesMap.txt        initial condition facies map
-params/DbPlatform/FinalBathmap.txt            initial water depth map
+params/DbPlatform/initialFaciesMapRandomY150X10.txt        initial condition facies map
+params/DbPlatform/isolated_platform.txt            initial water depth map
 params/DbPlatform/paramsConcentration.txt                  concentration input parameters
 params/DbPlatform/paramsSiliciclastic.txt                 	silicilastic input parameters
 params/DbPlatform/seaLevelConstS3000iterations.txt           sea level curve, maybe not needed if sinusoid selected
