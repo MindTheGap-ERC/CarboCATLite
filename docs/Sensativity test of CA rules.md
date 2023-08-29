@@ -17,10 +17,10 @@ The default CA rules are listed in the following table. Prodction CA (no wave se
 We first tested the scenario 1 to increase the tolerance of species (i.e., facies) in over-crowded settings:
 
 | Dist | Min Neighbors | Max Neighbors | Min Triggers | Max Triggers | Facies code |
-|....|.............|.............|............|............|...........|
-|2|2|16|4|16|1|
-|2|4|16|6|16|2|
-|2|4|16|6|16|3|
+| ----- | ------- | ---- |----- | --------- | ----- |
+| 2 | 2 | 16 | 4 | 16 | 1 |
+| 2 | 4 | 16 | 6 | 16 | 2 |
+| 2 | 4 | 16 | 6 | 16 | 3 |
 
 Note that this amendments are randomly choosed, and aim to just look how sensative the CA does in the reef evolution process.
 
@@ -50,10 +50,10 @@ In this trial, we can clearly see that the dominated species changes from red to
 We then tested scenario 2, decreasing the tolerance of species in over-corowded settings:
 
 | Dist | Min Neighbors | Max Neighbors | Min Triggers | Max Triggers | Facies code |
-|....|.............|.............|............|............|...........|
-|2|2|8|4|8|1|
-|2|4|8|6|8|2|
-|2|4|8|6|8|3|
+| ----- | ------- | ---- |----- | --------- | ----- |
+| 2 | 2 | 8 | 4 | 8 | 1 |
+| 2 | 4 | 8 | 6 | 8 | 2 |
+| 2 | 4 | 8 | 6 | 8 | 3 |
 
 We extracted the horizontal slices from this scenarios.
 
