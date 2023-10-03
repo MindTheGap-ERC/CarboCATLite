@@ -26,6 +26,11 @@ Web page: [www.liverpool.ac.uk/environmental-sciences/staff/peter-burgess](https
 ORCID: [0000-0002-3812-4231](https://orcid.org/0000-0002-3812-4231)  
 email: peter.burgess [at] liverpool.ac.uk
 
+## Citation
+
+To cite this work, please use  
+Burgess, Peter. (2023). CarboCATLite (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.8402578
+
 ## License and copyright
 
 Copyright 2013-2023 University of Liverpool and Royal Holloway, University of London
