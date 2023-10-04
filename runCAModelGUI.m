@@ -28,8 +28,6 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName)
         switch glob.CARoutine
             case 'simpleWave'
                 glob = calculateFaciesWaveDependentSimple(glob, iteration);
-            case 'orderedCA'
-                glob = calculateFaciesCARotationOrder(glob, iteration, order);
             case 'productionCA'
                 glob = calculateFaciesCAProdDependent(glob, iteration);
             case 'waveCA'
@@ -37,7 +35,7 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName)
             case 'waveHybridCA'
                 glob = calculateFaciesCAWaveDependentHybrid(glob, iteration);
             otherwise
-                glob = calculateFaciesCARotationOrder(glob, iteration, order); % Simplest CA option is the default
+                error('Unknown CA option')
         end    
 
         % input and diffusionally transport siliciclastics---------------------------------------------------------------------
