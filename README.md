@@ -4,6 +4,8 @@ CarboCATLite is a reduced complexity version of the CarboCAT model of carbonate 
 
 ## Running Instruction
 
+### GUI
+
 1. In Matlab, run the command
 
 ```{matlab}
@@ -25,9 +27,34 @@ in the console.
 
 5. To plot the results, click "plot run". This will generate the chronostratigraphic diagram and a basin transect in dip direction. Both the initial conditios and the chronostrat diagram/basin transect are automatically saved as .pdf files. WARNING: Generating the plots can take a long time. Saving the plots is finished once the message ```figure saved``` is displayed in the console.
 
+### CLI
+
+1. In Matlab, run the command
+
+```{matlab}
+CarboCAT_cli("params/DbPlatform/paramsInputValues.txt", "params/DbPlatform/paramsProcesses.txt",
+"model_run_42", "params/DbPlatform/seaLevelConst3000iterations.txt", true)
+```
+
+Input parameters:
+
+`ParamsPath`: string, relative path to the file with parameters, e.g. "params/DbPlatform/paramsInputValues.txt"
+
+`ProcessPath`: string, relative path to the file with the process settings, e.g. "params/DbPlatform/paramsProcesses.txt"
+
+`OutputName`: string, name to which model outputs are saved, e.g. "model_run_42"
+
+`SeaLevelPath`: string, relative path to the file with the sea level curve, e.g. "params/DbPlatform/seaLevelConst3000iterations.txt"
+
+`makePlot`: logical, true or false. Should the chronostratigraphic plot be generated?
+
+2. After the run is finished, all model outputs are saved into the file given as `OutputName`.
+
+
 ## License and copyright
 
-Copyright 2013-2023 University of Liverpool and Royal Holloway, University of London
+Copyright for the original code (1.0.0) 2013-2023 University of Liverpool and Royal Holloway, University of London
+Copyright modifications proposed here: 2023-2024 Utrecht University, the Netherlands eScience Center and University of Liverpool
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
