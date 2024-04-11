@@ -4,6 +4,31 @@ CarboCATLite is a reduced complexity version of the CarboCAT model of carbonate 
 
 ## Running Instruction
 
+### GUI
+
+1. In Matlab, run the command
+
+```{matlab}
+run carboCATGUI
+```
+
+This will open the CarboCATLite GUI
+
+2. Click the "initialize" button. This will import the model parameters from the _params_ folder
+3. Click the "Run CA model" button to run the model. The model status is shown in the console. The run is finished if you see the message
+
+```{matlab}
+Model complete after X iterations and ready to plot
+```
+
+in the console.
+
+4. After the run is finished, all model outputs are in the matlab workspace, and are saved into the file _CarboCATLite_outputs.mat_.
+
+5. To plot the results, click "plot run". This will generate the chronostratigraphic diagram and a basin transect in dip direction. Both the initial conditios and the chronostrat diagram/basin transect are automatically saved as .pdf files. WARNING: Generating the plots can take a long time. Saving the plots is finished once the message ```figure saved``` is displayed in the console.
+
+### CLI
+
 1. In Matlab, run the command
 
 ```{matlab}
@@ -25,9 +50,11 @@ Input parameters:
 
 2. After the run is finished, all model outputs are saved into the file given as `OutputName`.
 
+
 ## License and copyright
 
-Copyright 2013-2023 University of Liverpool and Royal Holloway, University of London
+Copyright for the original code (1.0.0) 2013-2023 University of Liverpool and Royal Holloway, University of London
+Copyright modifications proposed here: 2023-2024 Utrecht University, the Netherlands eScience Center and University of Liverpool
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
