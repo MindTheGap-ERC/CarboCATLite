@@ -1,9 +1,9 @@
-simpleWave        % Facies distribution routines: 'simpleWave','orderedCA' or 'productionCA' or 'waveCA' or 'waveHybridCA'
+waveHybridCA        % Facies distribution routines: 'simpleWave', 'productionCA', 'waveCA' or 'waveHybridCA'
 steepestSlope   % transportation algorithm: 'steepestSlope' or 'crossPlatform'
 on              % wave Energy
 off             % siliciciclastics: 'on' or 'off'
 off             % carbonate concentration: 'on' or 'off'
 off             % soil deposition: 'on'  or 'off'
 pre-exposed     % cell state when re-flooding: 'empty' or 'pre-exposed'
-sinusoid        % sea level curve origin: 'sinusoid' or 'file'
+file        % sea level curve origin: 'sinusoid' or 'file'
 wrap            % how to check neighbours or transport: 'wrap' or 'unwrap'

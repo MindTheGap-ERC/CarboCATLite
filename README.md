@@ -48,7 +48,8 @@ Input parameters:
 
 `makePlot`: logical, true or false. Should the chronostratigraphic plot be generated?
 
-2. After the run is finished, all model outputs are saved into the file given as `OutputName`.
+
+2. After the run is finished, all model outputs are saved into the file given as `OutputName`. This file can be further analyzed using scripts in the repo [MindTheGap-ERC/CarboCAT_utils](https://github.com/MindTheGap-ERC/CarboCAT_utils).
 
 
 ## License and copyright

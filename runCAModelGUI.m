@@ -1,11 +1,9 @@
-function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
+function [glob,stats,graph] = runCAModelGUI(glob, stats, graph, OutputName)
 % Run the model by executing all the functions specified in the processes input file
 
     order = 1; % rotates the order of facies neighbour checking in calculateFaciesCA to avoid bias for any one facies
     iteration = 2;
 
-    % initialize movie
-    %[graph,theMovie]=initializeMovie(graph);
 
     while iteration <= glob.totalIterations
 
@@ -30,8 +28,6 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
         switch glob.CARoutine
             case 'simpleWave'
                 glob = calculateFaciesWaveDependentSimple(glob, iteration);
-            case 'orderedCA'
-                glob = calculateFaciesCARotationOrder(glob, iteration, order);
             case 'productionCA'
                 glob = calculateFaciesCAProdDependent(glob, iteration);
             case 'waveCA'
@@ -39,7 +35,7 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
             case 'waveHybridCA'
                 glob = calculateFaciesCAWaveDependentHybrid(glob, iteration);
             otherwise
-                glob = calculateFaciesCARotationOrder(glob, iteration, order); % Simplest CA option is the default
+                error('Unknown CA option')
         end    
 
         % input and diffusionally transport siliciclastics---------------------------------------------------------------------
@@ -65,10 +61,6 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
 
         stats = recordFaciesVolumes(glob, stats, iteration);
         
-        %CarboCAT the movie-------------------------------------------------------------------------------------
-        %[graph,theMovie]=recordMovie(glob,iteration,graph,theMovie,subs);
-        %[graph,theMovie]=recordMovieSimple(glob,iteration,graph,theMovie,subs);
-
         % Control cycle through facies for neighbour checking
         order = order + 1;
         if order > glob.maxProdFacies; order = 1; end
@@ -82,19 +74,10 @@ function [glob,stats,graph] = runCAModelGUI(glob, stats, graph)
     if iteration > glob.totalIterations
         iteration = iteration - 1;
     end
-    
-    % export model outputs to main workspace
-    assignin("base","glob",glob);
-
-    assignin("base","stats",stats);
-    
+        
     % save model outputs
-    save("CarboCATLite_outputs.mat")
+    save(append(OutputName,".mat"), "glob")
 
-    fprintf('Model complete after %d iterations and ready to plot\n',iteration);
+    fprintf('Model complete after %d iterations and output saved\n',iteration);
 
-    % movie(mapMovie,1,1);
-    % movie2avi
-    %graph = finalGraphics(glob, stats, graph, iteration);
-    % graph = movie(glob, stats, graph, iteration);
 end
